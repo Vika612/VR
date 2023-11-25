@@ -10,10 +10,10 @@ import rename from 'gulp-rename';
 
 const sprite = () =>
   gulp
-    .src('source/img/sprite/*.svg')
-        .pipe(svgstore({inlineSvg: true}))
-        .pipe(rename('sprite.svg'))
-        .pipe(gulp.dest('build/img'));
+      .src('source/img/sprite/*.svg')
+      .pipe(svgstore({inlineSvg: true}))
+      .pipe(rename('sprite.svg'))
+      .pipe(gulp.dest('build/img'));
 
 const optimizeSvg = () =>
   gulp

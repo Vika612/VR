@@ -3,15 +3,23 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Home"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "About us"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Service"
+      },
+      {
+        href: "#",
+        text: "Pricing Plan",
+      },
+      {
+        href: "#",
+        text: "Blog",
       },
     ]
 
@@ -19,9 +27,11 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +img("content/logo", "logo-full", "png", 101, 30, "logo")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +img("content/logo", "logo-full", "png", 101, 30, "logo")
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)

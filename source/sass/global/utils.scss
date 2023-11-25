@@ -15,6 +15,10 @@
   main {
     flex-grow: 1;
   }
+
+  &--dark {
+    background-color: $color-black-russian;
+  }
 }
 
 .rouble {

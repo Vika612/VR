@@ -23,25 +23,26 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header(class=headerMods)
+  header.header(data-header)&attributes(attributes)
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo
-          +img("content/logo", "logo-full", "png", 101, 30, "logo")
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную")
-          +img("content/logo", "logo-full", "png", 101, 30, "logo")
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
+      .header__wrapper
+        .header__top-block
+          if(currentUrl === "index.html")
+            //- lighthouse снимает 10 баллов SEO за <a> без href
+            span.header__logo
+              +img("content/logo", "logo-full", "png", 101, 30, "logo")
+          else
+            a.header__logo(href="index.html", aria-label="Переход на главную")
+              +img("content/logo", "logo-full", "png", 101, 30, "logo")
+          button.header__toggle.btn-reset.btn--border-gradient(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-header-toggle)
+            +icon("icon-burger", 12, 8)
+        nav.header__nav
+          ul.header__nav-list(data-header-list)
             each link in headerLinks
               - const activeState = currentUrl === link.href
-              li.main-nav__item
+              li.header__nav-item
                 if(activeState)
-                  span.main-nav__link.link.link--header.is-active= link.text
+                  span.link.link--header.is-active= link.text
                 else
-                  a.main-nav__link.link.link--header(href=link.href)= link.text
-      +btn({text: "Contact us", href: "#"}).btn.btn--border-gradient.btn--border-gradient-fw300
+                  a.link.link--header(href=link.href)= link.text
+        +btn({text: "Contact us", href: "#"}).btn.btn--border-gradient.btn--border-gradient-fw300

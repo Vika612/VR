@@ -16,17 +16,14 @@
   }
 
   &--header {
-    min-width: 100px;
-    justify-content: center;
-
     font-size: 16px;
-    line-height: 28px;
+    line-height: 18px;
     font-weight: 300;
 
-    transition: font-weight $trans-default;
+    transition: text-shadow $trans-default;
 
     @include hover-focus {
-      font-weight: 600;
+      text-shadow: 0 0 1.5px $color-default-white, 0 0 1.5px $color-default-white;
       opacity: 1;
     }
   }

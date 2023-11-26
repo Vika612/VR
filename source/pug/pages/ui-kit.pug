@@ -60,7 +60,7 @@ block main
         //-       code(class="language-pug").
         //-         +btn({text: "modal-success"})(data-open-modal="success")
 
-        // Ссылки
+        //-Ссылки
         section.uikit__section(id="links")
           h2.uikit__h2 Ссылки
           .uikit__component
@@ -90,12 +90,26 @@ block main
               code(class="language-pug").
                 +btn({text: "Текст", href: "#"})
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ .btn--red \ link
-            +btn({text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
+            p.uikit__text.uikit__text--class .btn \ .btn--gradient
+            +btn({text: "Read more", href: "#", isExternal: true}).btn--gradient
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+                +btn({text: "Read more", href: "#", isExternal: true}).btn--gradient
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--border-gradient
+            +btn({text: "Learn more", href: "#", isExternal: true}).btn--border-gradient
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Learn more", href: "#", isExternal: true}).btn--border-gradient
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--border-gradient \ .btn--border-gradient-fw300
+            +btn({text: "Contact us", href: "#", isExternal: true}).btn--border-gradient.btn--border-gradient-fw300
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Contact us", href: "#", isExternal: true}).btn--border-gradient.btn--border-gradient-fw300
           .uikit__component
             p.uikit__text.uikit__text--class .btn \ disabled \ button
             +btn({text: "Текст"})(disabled)

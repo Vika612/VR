@@ -17,8 +17,10 @@ block main
         input.visually-hidden(type="checkbox", checked, id="section-burger")
         div
           ul
+            //- li
+            //-   a(href="#modals") Модальные окна
             li
-              a(href="#modals") Модальные окна
+              a(href="#links") Ссылки
             li
               a(href="#buttons") Кнопки
             li
@@ -41,22 +43,41 @@ block main
                 p Пример кода
 
         //- Модальные окна
-        section.uikit__section(id="modals")
-          h2.uikit__h2 Модальные окна
+        //- section.uikit__section(id="modals")
+        //-   h2.uikit__h2 Модальные окна
+        //-   .uikit__component
+        //-     p.uikit__text.uikit__text--class .modal \ .modal--feedback
+        //-     +btn({text: "modal-feedback"})(data-open-modal="feedback")
+        //-     pre
+        //-       |
+        //-       code(class="language-pug").
+        //-         +btn({text: "modal-feedback"})(data-open-modal="feedback")
+        //-   .uikit__component
+        //-     p.uikit__text.uikit__text--class .modal \ .modal--success
+        //-     +btn({text: "modal-success"})(data-open-modal="success")
+        //-     pre
+        //-       |
+        //-       code(class="language-pug").
+        //-         +btn({text: "modal-success"})(data-open-modal="success")
+
+        // Ссылки
+        section.uikit__section(id="links")
+          h2.uikit__h2 Ссылки
           .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--feedback
-            +btn({text: "modal-feedback"})(data-open-modal="feedback")
+            p.uikit__text.uikit__text--class .link \ default \ link
+            +link("#", "Ссылка")
             pre
               |
               code(class="language-pug").
-                +btn({text: "modal-feedback"})(data-open-modal="feedback")
+                +link("#", "Ссылка")
           .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--success
-            +btn({text: "modal-success"})(data-open-modal="success")
+            p.uikit__text.uikit__text--class .link \ link--header
+            +link("#", "Ссылка").link--header
             pre
               |
               code(class="language-pug").
-                +btn({text: "modal-success"})(data-open-modal="success")
+                +link("#", "Ссылка").link--header
+
 
         //- Кнопки
         section.uikit__section(id="buttons")

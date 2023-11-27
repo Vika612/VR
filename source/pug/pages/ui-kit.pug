@@ -24,6 +24,8 @@ block main
             li
               a(href="#buttons") Кнопки
             li
+              a(href="#social") Социальные сети
+            li
               a(href="#forms") Элементы форм
 
       //----------------------------------------------
@@ -117,6 +119,30 @@ block main
               |
               code(class="language-pug").
                 +btn({text: "Текст"})(disabled)
+
+        //- Социальные сети
+        section.uikit__section(id="social")
+          h2.uikit__h2 Социальные сети
+          .uikit__component
+            p.uikit__text.uikit__text--class .social
+            +social({
+              href: "#",
+              ariaLabel: "twitter",
+              iconName: "icon-x",
+              iconWidth: 20,
+              iconHeight: 15,
+            })
+            pre
+              |
+              code(class="language-pug").
+                +social({
+                  href: "#",
+                  ariaLabel: "twitter",
+                  iconName: "icon-x",
+                  iconWidth: 20,
+                  iconHeight: 15,
+                })
+
 
         //- Элементы форм
         section.uikit__section(id="forms")

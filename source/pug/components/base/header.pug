@@ -27,13 +27,7 @@ mixin header(headerMods, currentUrl)
     .container
       .header__wrapper
         .header__top-block
-          if(currentUrl === "index.html")
-            //- lighthouse снимает 10 баллов SEO за <a> без href
-            span.header__logo
-              +img("content/logo", "logo-full", "png", 101, 30, "logo")
-          else
-            a.header__logo(href="index.html", aria-label="Переход на главную")
-              +img("content/logo", "logo-full", "png", 101, 30, "logo")
+          +logo()
           button.header__toggle.btn-reset.btn--border-gradient(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-header-toggle)
             +icon("icon-burger", 12, 8)
         nav.header__nav

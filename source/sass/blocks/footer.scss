@@ -1,7 +1,66 @@
 .footer {
   position: relative;
-  z-index: 100;
+  z-index: 10;
   padding: 40px 0;
+
+  &__top {
+    padding-bottom: 35px;
+    display: grid;
+    grid-template-columns: 30% 64.5%;
+    column-gap: 62px;
+
+    @include vp-1279 {
+      grid-template-columns: 1fr;
+      gap: 56px 0;
+    }
+
+    @include vp-419 {
+      gap: 30px 0;
+    }
+  }
+
+  &__col1 {
+    padding-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include vp-1279 {
+      padding-bottom: 0;
+      flex-direction: row;
+    }
+
+    @include vp-419 {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__col2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @include vp-767 {
+      justify-content: flex-start;
+      gap: 56px;
+    }
+
+    @include vp-419 {
+      gap: 30px;
+    }
+  }
+
+  .contacts {
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__nav:first-child {
+    margin-right: 30px;
+  }
 
   &__nav {
     margin: 0;
@@ -9,7 +68,31 @@
 
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
+    row-gap: 20px;
     list-style: none;
+  }
+
+  &__copyright {
+    position: relative;
+    padding-top: 32px;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+
+    display: block;
+    text-align: center;
+    color: $color-default-white;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      content: "";
+      width: 100%;
+      height: 0.5px;
+      background: $gradient;
+    }
   }
 }

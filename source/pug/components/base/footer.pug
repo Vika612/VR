@@ -1,3 +1,36 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      .footer__top
+        .footer__col1
+          +logo()
+          +social()
+        .footer__col2
+          ul.footer__nav
+            li.footer__nav-item Quicklinks
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") Home
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") Pricing Plan
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") Service
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") Blog
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") Our Team
+          ul.footer__nav
+            li.footer__nav-item Support
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") About us
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") Contact us
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") FAQ
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") Tems &amp;&nbsp;Conditions
+            li.footer__nav-item
+              a.footer__nav-link.link(href="#") Privacy Policy
+        .footer__col3
+          +contacts()
+      .footer__bottom
+        span.footer__copyright &copy;&nbsp;Copyright 2023, All Rights Reserved

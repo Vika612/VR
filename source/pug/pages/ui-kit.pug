@@ -115,6 +115,13 @@ block main
               code(class="language-pug").
                 +btn({text: "Contact us", href: "#", isExternal: true}).btn--border-gradient.btn--border-gradient-fw300
           .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--icon
+            +btn({type: "submit", iconName: "icon-send", iconWidth: 17, iconHeight: 17}).btn--icon
+            pre
+              |
+              code(class="language-pug").
+                +btn({type: "submit", iconName: "icon-send", iconWidth: 17, iconHeight: 17}).btn--icon
+          .uikit__component
             p.uikit__text.uikit__text--class .btn \ disabled \ button
             +btn({text: "Текст"})(disabled)
             pre

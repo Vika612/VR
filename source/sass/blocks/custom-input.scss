@@ -40,6 +40,10 @@
 
   input::placeholder {
     color: $color-default-white;
+
+    @include vp-419 {
+      font-size: 12px;
+    }
   }
 
   &__label {

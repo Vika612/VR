@@ -1,0 +1,48 @@
+.form {
+  position: relative;
+  width: 100%;
+  transition: 800ms;
+
+  &__wrapper {
+    position: relative;
+    width: 365px;
+    background-color: rgba($color-default-white, 0.07);
+  }
+
+  &__icon {
+    position: absolute;
+    left: 14px;
+    top: 15px;
+
+    width: 24px;
+    height: 24px;
+    color: $color-default-white;
+  }
+
+  .btn {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+  }
+
+  &__message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 56px;
+    font-weight: 600;
+    color: $color-default-white;
+    background-image: $gradient;
+    display: none;
+  }
+}
+
+.form--success {
+  .form__message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+

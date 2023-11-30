@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {PageHeader} from './modules/page-header';
+import {formSendSuccess} from './modules/form-validate/form-success.js';
 
 // ---------------------------------
 
@@ -30,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     const pageHeader = new PageHeader();
     pageHeader.init();
+    formSendSuccess();
   });
 });
 

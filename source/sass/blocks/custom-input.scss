@@ -3,11 +3,10 @@
   position: relative;
 
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px 0;
+  width: 365px;
+  padding: 15px 60px 15px 48px;
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px 0;
     width: 100%;
   }
 
@@ -24,30 +23,23 @@
     input,
     textarea {
       flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
+      min-height: 24px;
 
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
+      border: 2px solid $color-transparent;
+      border-radius: 2px;
       outline: none;
 
-      transition: border 0.3s ease;
+      background-color: $color-transparent;
 
       @media screen and (max-width: 767px) {
         max-width: unset;
         width: 100%;
       }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
     }
+  }
+
+  input::placeholder {
+    color: $color-default-white;
   }
 
   &__label {
@@ -56,56 +48,26 @@
     }
   }
 
-  &__error {
-    position: absolute;
-    right: 0;
-    bottom: 35px;
-
-    color: #ff1553;
-
-    opacity: 0;
-
-    transition: opacity 0.3s ease;
-
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
-    }
-  }
-
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border: 2px solid $color-coral-red;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 2px solid rgba($color-coral-red, 0.5);
       }
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
+      border: 2px solid $color-jade;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
+        border: 2px solid rgba($color-jade, 0.5);
       }
-    }
-  }
-
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-
-    &.is-invalid {
-      color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
     }
   }
 }

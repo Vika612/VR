@@ -1,0 +1,12 @@
+mixin form()
+  .form(data-form-validate, data-callback="base")
+    form(method="post")
+      .form__wrapper
+        +icon("icon-message", 20, 20).form__icon
+        +custom-input({
+          inputType: "email",
+          inputPlaceholder: "Enter your email address",
+          inputName: "user-mail",
+        })(data-validate-type="email", data-required)
+        +btn({type: "submit", iconName: "icon-send", iconWidth: 17, iconHeight: 17}).btn--icon
+        .form__message

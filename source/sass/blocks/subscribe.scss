@@ -1,0 +1,25 @@
+.subscribe {
+  &__wrapper {
+    padding: 38px 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+    background: $gradient;
+
+    @include vp-1279 {
+      padding: 31px 13px;
+      flex-direction: column;
+    }
+  }
+
+  .title {
+    max-width: 570px;
+
+    @include vp-1279 {
+      max-width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+}

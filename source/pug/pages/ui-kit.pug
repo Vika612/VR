@@ -26,7 +26,7 @@ block main
             li
               a(href="#social") Заголовки
             li
-              a(href="#forms") Элементы форм
+              a(href="#subscribe") Блок с формой
 
       //----------------------------------------------
       .container
@@ -153,32 +153,16 @@ block main
             p.title.title--gradient Заголовок
 
 
-        //- Элементы форм
-        section.uikit__section(id="forms")
-          h2.uikit__h2 Элементы форм
+        //- Блок с формой
+        section.uikit__section(id="subscribe")
+          h2.uikit__h2 Блок с формой
           .uikit__component
-            p.uikit__text.uikit__text--class .custom-input \ type="email"
-            +custom-input({
-              inputType: "email",
-              inputPlaceholder: "Enter your email address",
-              inputName: "user-mail",
-            })
+            p.uikit__text.uikit__text--class .subscribe
+              +subscribe()
             pre
               |
               code(class="language-pug").
-                +custom-input({
-                  inputType: "email",
-                  inputPlaceholder: "Enter your email address",
-                  inputName: "user-mail",
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class .form
-            +form()
-            pre
-              |
-              code(class="language-pug").
-                +form()
-
+                +subscribe()
 
   script
     include ../../js/inline/ui-kit.js

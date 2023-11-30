@@ -1,11 +1,11 @@
 .form {
   position: relative;
+  max-width: 365px;
   width: 100%;
   transition: 800ms;
 
   &__wrapper {
     position: relative;
-    width: 365px;
     background-color: rgba($color-default-white, 0.07);
   }
 

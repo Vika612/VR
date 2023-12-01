@@ -26,6 +26,8 @@ block main
             li
               a(href="#social") Заголовки
             li
+              a(href="#benefits") Преимущества
+            li
               a(href="#subscribe") Блок с формой
 
       //----------------------------------------------
@@ -151,6 +153,25 @@ block main
           .uikit__component
             p.uikit__text.uikit__text--class .title \ .title--gradient
             p.title.title--gradient Заголовок
+
+        //- Преимущества
+        section.uikit__section(id="subscribe")
+          h2.uikit__h2 Преимущества
+          .uikit__component
+            p.uikit__text.uikit__text--class .benefits
+              +benefits({
+                imgName: "service",
+                title: "Service",
+                text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery."
+              })
+            pre
+              |
+              code(class="language-pug").
+                +benefits({
+                  imgName: "service",
+                  title: "Service",
+                  text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery."
+                })
 
 
         //- Блок с формой

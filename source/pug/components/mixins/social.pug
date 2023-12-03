@@ -34,5 +34,5 @@ mixin social()
   ul.social
     each item in socialList
       li.social__item
-        a.social__link(href=item.href aria-label=item.ariaLabel)
+        a.social__link(href=item.href, aria-label=item.ariaLabel)
           +icon(item.iconName, item.iconWidth, item.iconHeight)

@@ -24,7 +24,9 @@ block main
             li
               a(href="#social") Социальные сети
             li
-              a(href="#social") Заголовки
+              a(href="#titles") Заголовки
+            li
+              a(href="#users") Пользователи
             li
               a(href="#benefits") Преимущества
             li
@@ -136,7 +138,7 @@ block main
 
 
         //- Заголовки
-        section(id="title")
+        section(id="titles")
           h2.uikit__title-h2 Заголовки
           .uikit__component
             p.uikit__text.uikit__text--class .title \ .title--h1
@@ -154,8 +156,21 @@ block main
             p.uikit__text.uikit__text--class .title \ .title--gradient
             p.title.title--gradient Заголовок
 
+
+        //- Пользователи
+        section.uikit__section(id="users")
+          h2.uikit__h2 Пользователи
+          .uikit__component
+            p.uikit__text.uikit__text--class .users
+              +users()
+            pre
+              |
+              code(class="language-pug").
+                +users()
+
+
         //- Преимущества
-        section.uikit__section(id="subscribe")
+        section.uikit__section(id="benefits")
           h2.uikit__h2 Преимущества
           .uikit__component
             p.uikit__text.uikit__text--class .benefits

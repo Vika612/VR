@@ -1,0 +1,17 @@
+-
+  const avatarList = [
+    {imgName: "user-1"},
+    {imgName: "user-2"},
+    {imgName: "user-3"},
+  ]
+
+mixin users()
+  .users&attributes(attributes)
+    ul.users__list
+      each user in avatarList
+        li.users__item
+          +img("content/users", user.imgName, "png", 51, 51)
+    p.users__info
+      span.users__qty 32k+
+        //- +icon("icon-accent", 48, 7, true)
+      span.users__note Happy Client

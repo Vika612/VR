@@ -22,6 +22,6 @@ mixin benefits()
     each item in list
       li.benefits__item
         .benefits__img-container
-          +img("decor/benefits", item.imgName, "png", 70, 70, "image")
+          +picture("decor/benefits", item.imgName, "png", 70, 70, "image")
         h3.title.title--h3!= item.title
         p.benefits__text!= item.text

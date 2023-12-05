@@ -2,7 +2,7 @@ mixin logo()
   .logo&attributes(attributes)
     if(currentUrl === "index.html")
       span.logo__icon
-        +picture("content/logo", "logo-full", "png", 101, 30, "logo")
+        +icon("icon-logo", 101, 30, true)
     else
       a.logo__icon(href="index.html", aria-label="Переход на главную")
-        +picture("content/logo", "logo-full", "png", 101, 30, "logo")
+        +icon("icon-logo", 101, 30, true)

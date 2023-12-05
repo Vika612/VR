@@ -1,17 +1,23 @@
 -
   const list = [
     {
-      imgName: "expertise",
+      iconName: "icon-expertise",
+      iconWidth: 69,
+      iconHeight: 45,
       title: "Expertise",
       text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
     },
     {
-      imgName: "customization",
+      iconName: "icon-customization",
+      iconWidth: 64,
+      iconHeight: 60,
       title: "Customization",
       text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
     },
     {
-      imgName: "service",
+      iconName: "icon-service",
+      iconWidth: 60,
+      iconHeight: 64,
       title: "Service",
       text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
     },
@@ -22,6 +28,6 @@ mixin benefits()
     each item in list
       li.benefits__item
         .benefits__img-container
-          +picture("decor/benefits", item.imgName, "png", 70, 70, "image")
+          +icon(item.iconName, item.iconWidth, item.iconHeight, true)
         h3.title.title--h3!= item.title
         p.benefits__text!= item.text

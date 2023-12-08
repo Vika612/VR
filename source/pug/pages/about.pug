@@ -1,0 +1,17 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "About us" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = "wrapper--dark"
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "about.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    .page-content
+      +subscribe()
+
+block modals

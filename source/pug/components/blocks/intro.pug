@@ -1,5 +1,16 @@
 mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+  section.intro&attributes(attributes)
+    +icon("icon-bg", 875, 760, true).intro__bg
     .container
+      .intro__container
+        .intro__col1
+          h1.title.title--h1 Immerse Yourself in&nbsp;Virtual Reality
+          p.text Experience Unforgettable Events in&nbsp;VR. Bring your events to&nbsp;life like never before with our&nbsp;VR services
+          +btn({text: "discover more", href: "#", isExternal: true}).btn.btn--gradient
+          +users()
+        .intro__col2
+          .intro__img-container
+            +picture("content", "image-1", "png", 526, 626, "img")
+          .intro__img-container-small
+              +picture("content", "image-2", "png", 125, 124, "img")
+      +benefits()

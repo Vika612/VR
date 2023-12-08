@@ -7,8 +7,14 @@
   &--h1 {
     font-weight: 600;
     font-size: 64px;
-    line-height: 64px;
+    line-height: normal;
     letter-spacing: -0.32px;
+
+    @include vp-1023 {
+      font-size: 48px;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+    }
   }
 
   &--h2 {

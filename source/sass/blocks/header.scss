@@ -95,6 +95,8 @@
   }
 
   .btn {
+    width: 126px;
+
     @include vp-767 {
       display: none;
     }

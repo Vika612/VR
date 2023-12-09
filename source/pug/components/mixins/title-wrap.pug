@@ -1,0 +1,7 @@
+mixin title-wrap(options = {})
+  - const titleGradient = options.titleGradient;
+  - const titleH2 = options.titleH2;
+
+  .title-wrap&attributes(attributes)
+    p.title--gradient!= titleGradient
+    h2.title.title--h2!= titleH2

@@ -22,6 +22,8 @@ block main
             li
               a(href="#buttons") Кнопки
             li
+              a(href="#breadcrumbs") Хлебные крошки
+            li
               a(href="#social") Социальные сети
             li
               a(href="#titles") Заголовки
@@ -50,7 +52,7 @@ block main
               code(class="language-pug").
                 p Пример кода
 
-        //-Ссылки
+        //- Ссылки
         section.uikit__section(id="links")
           h2.uikit__h2 Ссылки
           .uikit__component
@@ -114,6 +116,41 @@ block main
               |
               code(class="language-pug").
                 +btn({text: "Текст"})(disabled)
+
+
+        //- Хлебные крошки
+        section.uikit__section(id="breadcrumbs")
+          h2.uikit__h2 Хлебные крошки
+          .uikit__component
+            p.uikit__text.uikit__text--class .breadcrumbs
+            +breadcrumbs([
+              {
+                name: "Home",
+                href: "index.html",
+                current: false,
+              },
+              {
+                name: "Ui-kit",
+                href: "#",
+                current: true,
+              },
+            ])
+            pre
+              |
+              code(class="language-pug").
+                +breadcrumbs([
+                  {
+                    name: "Home",
+                    href: "index.html",
+                    current: false,
+                  },
+                  {
+                    name: "Ui-kit",
+                    href: "#",
+                    current: true,
+                  },
+                ])
+
 
         //- Социальные сети
         section.uikit__section(id="social")

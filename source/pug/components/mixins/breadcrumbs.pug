@@ -1,0 +1,9 @@
+mixin breadcrumbs(data)
+  ul.breadcrumbs&attributes(attributes)
+    each item in data
+      if (!item.current)
+        li.breadcrumbs__item
+          a.breadcrumbs__link.link(href=item.href)!= item.name
+      else
+        li.breadcrumbs__item
+          a.breadcrumbs__link.breadcrumbs__link--current.link(href=item.href)!= item.name

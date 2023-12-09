@@ -30,6 +30,8 @@ block main
             li
               a(href="#benefits") Преимущества
             li
+              a(href="#services") Сервисы
+            li
               a(href="#subscribe") Блок с формой
 
       //----------------------------------------------
@@ -186,6 +188,29 @@ block main
                   imgName: "service",
                   title: "Service",
                   text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery."
+                })
+
+        //- Сервисы
+        section.uikit__section(id="services")
+          h2.uikit__h2 Сервисы
+          .uikit__component
+            p.uikit__text.uikit__text--class .services
+              +services({
+                iconName: "icon-development",
+                iconWidth: 48,
+                iconHeight: 48,
+                title: "VR&nbsp;Development",
+                text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +services({
+                  iconName: "icon-development",
+                  iconWidth: 48,
+                  iconHeight: 48,
+                  title: "VR&nbsp;Development",
+                  text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
                 })
 
 

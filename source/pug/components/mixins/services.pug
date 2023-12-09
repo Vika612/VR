@@ -1,0 +1,56 @@
+-
+  const serviceList = [
+    {
+      iconName: "icon-development",
+      iconWidth: 48,
+      iconHeight: 48,
+      title: "VR&nbsp;Development",
+      text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+    },
+    {
+      iconName: "icon-design",
+      iconWidth: 48,
+      iconHeight: 48,
+      title: "VR&nbsp;Design",
+      text: "Our talented&nbsp;VR designers will create immersive and engaging environments that will captivate your audience.",
+    },
+    {
+      iconName: "icon-consulting",
+      iconWidth: 48,
+      iconHeight: 48,
+      title: "VR&nbsp;Consulting",
+      text: "Our VR&nbsp;consultants will work with you to&nbsp;ensure that your&nbsp;VR experience meets your goals and exceeds your expectations.",
+    },
+    {
+      iconName: "icon-games",
+      iconWidth: 48,
+      iconHeight: 48,
+      title: "VR&nbsp;Games",
+      text: "We&nbsp;offer a&nbsp;wide selection of&nbsp;VR games that are suitable for players of&nbsp;all ages and skill levels.",
+    },
+    {
+      iconName: "icon-events",
+      iconWidth: 48,
+      iconHeight: 48,
+      title: "VR&nbsp;Events",
+      text: "Make your next event unforgettable with our&nbsp;VR event services.",
+    },
+    {
+      iconName: "icon-entertainment",
+      iconWidth: 48,
+      iconHeight: 48,
+      title: "VR&nbsp;Entertainment",
+      text: "reate a&nbsp;VR escape room, or&nbsp;offer&nbsp;VR experiences at&nbsp;a&nbsp;theme park, we&nbsp;have the expertise and experience to&nbsp;make it&nbsp;happen.",
+    },
+  ]
+
+mixin services()
+  ul.services&attributes(attributes)
+    each item in serviceList
+      li.services__item(tabindex=0)
+        .services__img-container
+          +icon(item.iconName, item.iconWidth, item.iconHeight, true)
+        .services__wrap
+          h3.title.title--h3!= item.title
+          p.services__text!= item.text
+        +btn({text: "Learn more", href: "#"}).btn.btn--border-gradient

@@ -1,0 +1,11 @@
+mixin our-service()
+  section.our-service.section&attributes(attributes)
+    +icon("icon-bg-service", 613, 619, true).our-service__bg
+    .container
+      .our-service__container
+        +title-wrap({
+          titleGradient: "Our service",
+          titleH2: "Our Service",
+        })
+        p.text We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have.
+      +services()

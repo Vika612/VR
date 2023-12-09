@@ -9,12 +9,16 @@
     height: auto;
 
     @include vp-1279 {
-      width: 100%;
+      // width: 100%;
       top: 25%;
     }
 
     @include vp-767 {
       width: 100%;
+    }
+
+    @media screen and (min-width: 1920px) {
+      display: none;
     }
   }
 

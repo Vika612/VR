@@ -34,6 +34,8 @@ block main
             li
               a(href="#services") Сервисы
             li
+              a(href="#blog-card") Карточка новости
+            li
               a(href="#subscribe") Блок с формой
 
       //----------------------------------------------
@@ -69,7 +71,6 @@ block main
               |
               code(class="language-pug").
                 +link("#", "Ссылка").link--header
-
 
         //- Кнопки
         section.uikit__section(id="buttons")
@@ -117,7 +118,6 @@ block main
               code(class="language-pug").
                 +btn({text: "Текст"})(disabled)
 
-
         //- Хлебные крошки
         section.uikit__section(id="breadcrumbs")
           h2.uikit__h2 Хлебные крошки
@@ -151,7 +151,6 @@ block main
                   },
                 ])
 
-
         //- Социальные сети
         section.uikit__section(id="social")
           h2.uikit__h2 Социальные сети
@@ -175,7 +174,6 @@ block main
                   iconHeight: 15,
                 })
 
-
         //- Заголовки
         section(id="titles")
           h2.uikit__title-h2 Заголовки
@@ -195,7 +193,6 @@ block main
             p.uikit__text.uikit__text--class .title \ .title--gradient
             p.title.title--gradient Заголовок
 
-
         //- Пользователи
         section.uikit__section(id="users")
           h2.uikit__h2 Пользователи
@@ -206,7 +203,6 @@ block main
               |
               code(class="language-pug").
                 +users()
-
 
         //- Преимущества
         section.uikit__section(id="benefits")
@@ -250,6 +246,24 @@ block main
                   text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
                 })
 
+        //- Карточка новости
+        section.uikit__section(id="blog-card")
+          h2.uikit__h2 Карточка новости
+          .uikit__component
+            p.uikit__text.uikit__text--class .blog-card
+              +blog-card({
+                imgName: "img-4",
+                title: "VR&nbsp;Event",
+                text: "Exploring New Worlds: The Benefits of&nbsp;VR&nbsp;Travel",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +blog-card({
+                  imgName: "img-4",
+                  title: "VR&nbsp;Event",
+                  text: "Exploring New Worlds: The Benefits of&nbsp;VR&nbsp;Travel",
+                })
 
         //- Блок с формой
         section.uikit__section(id="subscribe")

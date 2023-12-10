@@ -1,0 +1,28 @@
+-
+  const blogList = [
+    {
+      imgName: "img-1",
+      title: "VR&nbsp;Education",
+      text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom",
+    },
+    {
+      imgName: "img-2",
+      title: "VR&nbsp;Architecture",
+      text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture",
+    },
+    {
+      imgName: "img-3",
+      title: "VR&nbsp;Entertainment",
+      text: "Making Events Memorable: The Power of&nbsp;VR for Corporate and Special Occasions",
+    },
+    {
+      imgName: "img-4",
+      title: "VR&nbsp;Event",
+      text: "Exploring New Worlds: The Benefits of&nbsp;VR&nbsp;Travel",
+    },
+  ]
+
+mixin blog-list()
+  ul.blog-list&attributes(attributes)
+    each item in blogList
+      +blog-card(item)

@@ -1,0 +1,12 @@
+mixin blog-card(options = {})
+  - const imgName = options.imgName;
+  - const title = options.title;
+  - const text = options.text;
+
+  li.blog-card&attributes(attributes)
+    a.blog-card__link(href="#")
+      .blog-card__img-container
+        +picture("content/recente-article", imgName, "png", 103, 66, "image")
+      .blog-card__wrap
+        p.blog-card__title!= title
+        p.blog-card__text!= text

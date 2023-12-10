@@ -1,0 +1,10 @@
+.blog-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  .blog-card:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}

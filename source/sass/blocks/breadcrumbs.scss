@@ -11,7 +11,7 @@
   &__item {
     &:not(:last-child)::after {
       content: url("../img/sprite/icon-breadcrumbs.svg");
-      padding: 0 14px;
+      padding: 0 10px;
       width: 18px;
       height: 18px;
     }

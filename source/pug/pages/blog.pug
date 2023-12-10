@@ -8,10 +8,36 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "blog.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  -
+    const breadcrumbsBlog = [
+      {
+        name: "Home",
+        href: "index.html",
+        current: false,
+      },
+      {
+        name: "Blog",
+        href: "#",
+        current: false,
+      },
+      {
+        name: "Bringing Designs to Life: How VR is Changing Architecture",
+        href: "#",
+        current: true,
+      },
+    ]
 
 block main
   main
     .page-content
+      .container
+        +breadcrumbs(breadcrumbsBlog)
+
+      .inner-wrapper.container
+        div
+          +text-content()
+        div
+
       +subscribe()
 
 block modals

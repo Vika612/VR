@@ -23,6 +23,8 @@
   ]
 
 mixin blog-list()
-  ul.blog-list&attributes(attributes)
-    each item in blogList
-      +blog-card(item)
+  .blog-list&attributes(attributes)
+    p.title.title--h3 Recent Article
+    ul.blog-list__list
+      each item in blogList
+        +blog-card(item)

@@ -1,8 +1,15 @@
 .blog-list {
-  margin: 0;
-  padding: 0;
+  .title {
+    margin-bottom: 0;
+    font-weight: 500;
+  }
 
-  list-style: none;
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
 
   .blog-card:not(:first-child) {
     border-top: 1px solid rgba(255, 255, 255, 0.15);

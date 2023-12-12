@@ -1,0 +1,25 @@
+-
+  const tagsList1 = {
+    mod: "tag-gradient",
+    title: "Post Tags :",
+    list: ["#VRDesign", "#ArchitectureInnovation", "#VirtualRealityArchitecture", "#BringingDesignsToLife", "#DesignVisualization",
+    "#ArchitecturalVisualization", "#RevolutionizingArchitecture", "#BuildingInVR", "#DesignThinking", "#VRInArchitecture",],
+  }
+
+-
+  const tagsList2 = {
+    mod: "hashtag",
+    title: "Popular Hashtag",
+    list: ["#VRDesign", "#ArchitectureInnovation ", "#DesignThinking", "#VirtualRealityArchitecture", "#BringingDesignsToLife",
+    "#DesignVisualization", "#ArchitecturalVisualization", "#RevolutionizingArchitecture", "#BuildingInVR",],
+  }
+
+mixin tags-list(options = {})
+  - const title = options.title;
+  - const mod = options.mod;
+
+  .tags-list&attributes(attributes)(class=`tags-list--${mod}`)
+    p.title.title--h4!= title
+    ul.tags-list__list
+      each tag in options.list
+        li.tags-list__item!= tag

@@ -36,6 +36,8 @@ block main
             li
               a(href="#blog-card") Карточка новости
             li
+              a(href="#tags") Хэштеги
+            li
               a(href="#subscribe") Блок с формой
 
       //----------------------------------------------
@@ -263,6 +265,40 @@ block main
                   imgName: "img-4",
                   title: "VR&nbsp;Event",
                   text: "Exploring New Worlds: The Benefits of&nbsp;VR&nbsp;Travel",
+                })
+
+        //- Хэштеги
+        section.uikit__section(id="tags")
+          h2.uikit__h2 Хэштеги
+          .uikit__component
+            p.uikit__text.uikit__text--class .tags-list.tags-list--tag-gradient
+              +tags-list({
+                mod: "tag-gradient",
+                title: "Post Tags :",
+                list: ["#VRDesign", "#ArchitectureInnovation", "#VirtualRealityArchitecture",],
+              })
+            pre
+              |
+              code(class="language-pug").
+                +tags-list({
+                  mod: "tag-gradient",
+                  title: "Post Tags :",
+                  list: ["#VRDesign", "#ArchitectureInnovation", "#VirtualRealityArchitecture",],
+                })
+          .uikit__component
+            p.uikit__text.uikit__text--class .tags-list.tags-list--hashtag
+              +tags-list({
+                mod: "hashtag",
+                title: "Popular Hashtag",
+                list: ["#VRDesign", "#ArchitectureInnovation ", "#DesignThinking",],
+              })
+            pre
+              |
+              code(class="language-pug").
+                +tags-list({
+                  mod: "hashtag",
+                  title: "Popular Hashtag",
+                  list: ["#VRDesign", "#ArchitectureInnovation ", "#DesignThinking",],
                 })
 
         //- Блок с формой

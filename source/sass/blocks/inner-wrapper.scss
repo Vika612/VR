@@ -9,4 +9,8 @@
     padding-bottom: 100px;
     grid-template-columns: 1fr;
   }
+
+  & > div:first-of-type {
+    padding-bottom: 100px;
+  }
 }

@@ -157,24 +157,105 @@ block main
         section.uikit__section(id="social")
           h2.uikit__h2 Социальные сети
           .uikit__component
-            p.uikit__text.uikit__text--class .social
+            p.uikit__text.uikit__text--class .social.social--gradient
             +social({
-              href: "#",
-              ariaLabel: "twitter",
-              iconName: "icon-x",
-              iconWidth: 20,
-              iconHeight: 15,
+              mod: "gradient",
+              list: [
+                {
+                  href: "#",
+                  ariaLabel: "instagram",
+                  iconName: "icon-insta",
+                  iconWidth: 24,
+                  iconHeight: 23,
+                },
+                {
+                  href: "#",
+                  ariaLabel: "github",
+                  iconName: "icon-git",
+                  iconWidth: 22,
+                  iconHeight: 22,
+                },
+              ]
             })
             pre
               |
               code(class="language-pug").
-                +social({
+                mod: "gradient",
+                list: [
+                  {
+                    href: "#",
+                    ariaLabel: "instagram",
+                    iconName: "icon-insta",
+                    iconWidth: 24,
+                    iconHeight: 23,
+                  },
+                  {
+                    href: "#",
+                    ariaLabel: "github",
+                    iconName: "icon-git",
+                    iconWidth: 22,
+                    iconHeight: 22,
+                  },
+                ]
+          .uikit__component
+            p.uikit__text.uikit__text--class .social.social--withoutBg
+            +social({
+              mod: "withoutBg",
+              title: "Share :",
+              list: [
+                {
                   href: "#",
                   ariaLabel: "twitter",
                   iconName: "icon-x",
                   iconWidth: 20,
                   iconHeight: 15,
-                })
+                },
+                {
+                  href: "#",
+                  ariaLabel: "facebook",
+                  iconName: "icon-fb",
+                  iconWidth: 12,
+                  iconHeight: 21,
+                },
+                {
+                  href: "#",
+                  ariaLabel: "instagram",
+                  iconName: "icon-insta",
+                  iconWidth: 24,
+                  iconHeight: 23,
+                },
+              ]
+            })
+            pre
+              |
+              code(class="language-pug").
+                mod: "withoutBg",
+                title: "Share :",
+                list: [
+                  {
+                    href: "#",
+                    ariaLabel: "twitter",
+                    iconName: "icon-x",
+                    iconWidth: 20,
+                    iconHeight: 15,
+                  },
+                  {
+                    href: "#",
+                    ariaLabel: "facebook",
+                    iconName: "icon-fb",
+                    iconWidth: 12,
+                    iconHeight: 21,
+                  },
+                  {
+                    href: "#",
+                    ariaLabel: "instagram",
+                    iconName: "icon-insta",
+                    iconWidth: 24,
+                    iconHeight: 23,
+                  },
+                ]
+
+
 
         //- Заголовки
         section(id="titles")

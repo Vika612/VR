@@ -1,38 +1,75 @@
 -
-  const socialList = [
-    {
-      href: "#",
-      ariaLabel: "twitter",
-      iconName: "icon-x",
-      iconWidth: 20,
-      iconHeight: 15,
-    },
-    {
-      href: "#",
-      ariaLabel: "facebook",
-      iconName: "icon-fb",
-      iconWidth: 12,
-      iconHeight: 21,
-    },
-    {
-      href: "#",
-      ariaLabel: "instagram",
-      iconName: "icon-insta",
-      iconWidth: 24,
-      iconHeight: 23,
-    },
-    {
-      href: "#",
-      ariaLabel: "github",
-      iconName: "icon-git",
-      iconWidth: 22,
-      iconHeight: 22,
-    },
-  ]
+  const socialList = {
+    mod: "gradient",
+    list: [
+      {
+        href: "#",
+        ariaLabel: "twitter",
+        iconName: "icon-x",
+        iconWidth: 20,
+        iconHeight: 15,
+      },
+      {
+        href: "#",
+        ariaLabel: "facebook",
+        iconName: "icon-fb",
+        iconWidth: 12,
+        iconHeight: 21,
+      },
+      {
+        href: "#",
+        ariaLabel: "instagram",
+        iconName: "icon-insta",
+        iconWidth: 24,
+        iconHeight: 23,
+      },
+      {
+        href: "#",
+        ariaLabel: "github",
+        iconName: "icon-git",
+        iconWidth: 22,
+        iconHeight: 22,
+      },
+    ]
+  }
 
-mixin social()
-  ul.social
-    each item in socialList
-      li.social__item
-        a.social__link(href=item.href, aria-label=item.ariaLabel)
-          +icon(item.iconName, item.iconWidth, item.iconHeight)
+-
+  const socialListWithoutBg = {
+    mod: "withoutBg",
+    title: "Share :",
+    list: [
+      {
+        href: "#",
+        ariaLabel: "twitter",
+        iconName: "icon-x",
+        iconWidth: 20,
+        iconHeight: 15,
+      },
+      {
+        href: "#",
+        ariaLabel: "facebook",
+        iconName: "icon-fb",
+        iconWidth: 12,
+        iconHeight: 21,
+      },
+      {
+        href: "#",
+        ariaLabel: "instagram",
+        iconName: "icon-insta",
+        iconWidth: 24,
+        iconHeight: 23,
+      },
+    ]
+  }
+
+mixin social(options = {})
+  - const title = options.title;
+  - const mod = options.mod;
+
+  .social&attributes(attributes)(class=`social--${mod}`)
+    p.title.title--h4!= title
+    ul.social__list
+      each item in options.list
+        li.social__item
+          a.social__link(href=item.href, aria-label=item.ariaLabel)
+            +icon(item.iconName, item.iconWidth, item.iconHeight)

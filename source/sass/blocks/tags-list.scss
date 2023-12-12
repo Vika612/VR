@@ -8,6 +8,10 @@
   &--tag-gradient {
     margin-bottom: 17px;
 
+    .title {
+      margin-bottom: 12px;
+    }
+
     .tags-list__list {
       display: flex;
       flex-wrap: wrap;

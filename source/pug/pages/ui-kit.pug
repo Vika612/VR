@@ -38,6 +38,8 @@ block main
             li
               a(href="#tags") Хэштеги
             li
+              a(href="#date") Дата
+            li
               a(href="#subscribe") Блок с формой
 
       //----------------------------------------------
@@ -255,8 +257,6 @@ block main
                   },
                 ]
 
-
-
         //- Заголовки
         section(id="titles")
           h2.uikit__title-h2 Заголовки
@@ -381,6 +381,17 @@ block main
                   title: "Popular Hashtag",
                   list: ["#VRDesign", "#ArchitectureInnovation ", "#DesignThinking",],
                 })
+
+        //- Дата
+        section.uikit__section(id="date")
+          h2.uikit__h2 Дата
+          .uikit__component
+            p.uikit__text.uikit__text--class .date
+              +date({dataTime: "2022-11-25", date: "25&nbsp;nov 2022"})
+            pre
+              |
+              code(class="language-pug").
+                +date({dataTime: "2022-11-25", date: "25&nbsp;nov 2022"})
 
         //- Блок с формой
         section.uikit__section(id="subscribe")

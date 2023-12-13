@@ -11,6 +11,8 @@
   }
 
   & > div:first-of-type {
-    padding-bottom: 100px;
+    @include vp-1279 {
+      padding-bottom: 100px;
+    }
   }
 }

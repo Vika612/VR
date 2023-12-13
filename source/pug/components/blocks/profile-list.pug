@@ -1,0 +1,28 @@
+-
+  const profileList = [
+    {
+      imgName: "photo-1",
+      name: "Bondan Prabowo",
+      info: "CEO",
+    },
+    {
+      imgName: "photo-2",
+      name: "Bayu Aji",
+      info: "VR&nbsp;Development",
+    },
+    {
+      imgName: "photo-3",
+      name: "Agung Brandon",
+      info: "VR&nbsp;Artist",
+    },
+    {
+      imgName: "photo-4",
+      name: "Aril Laso",
+      info: "UI&nbsp;/ UX&nbsp;Designer",
+    },
+  ]
+
+mixin profile-list()
+  ul.profile-list&attributes(attributes)
+    each item in profileList
+      +profile(item)

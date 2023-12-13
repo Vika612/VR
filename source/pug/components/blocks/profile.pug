@@ -3,7 +3,7 @@ mixin profile(options = {})
   - const name = options.name
   - const info = options.info
 
-    .profile&attributes(attributes)
+    li.profile&attributes(attributes)
       .profile__img-container
         +picture("content/team", imgName, "jpg", 275, 371, "employee photo")
       .profile__info-container

@@ -1,0 +1,11 @@
+mixin profile(options = {})
+  - const imgName = options.imgName
+  - const name = options.name
+  - const info = options.info
+
+    .profile&attributes(attributes)
+      .profile__img-container
+        +picture("content/team", imgName, "jpg", 275, 371, "employee photo")
+      .profile__info-container
+        p.title.title--h4!= name
+        span.profile__info!= info

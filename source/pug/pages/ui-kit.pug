@@ -40,6 +40,8 @@ block main
             li
               a(href="#date") Дата
             li
+              a(href="#profile") Профиль
+            li
               a(href="#subscribe") Блок с формой
 
       //----------------------------------------------
@@ -392,6 +394,25 @@ block main
               |
               code(class="language-pug").
                 +date({dataTime: "2022-11-25", date: "25&nbsp;nov 2022"})
+
+        //- Профиль
+        section.uikit__section(id="profile")
+          h2.uikit__h2 Профиль
+          .uikit__component
+            p.uikit__text.uikit__text--class .profile
+              +profile({
+                imgName: "photo-1",
+                name: "Bondan Prabowo",
+                info: "CEO",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +profile({
+                  imgName: "photo-1",
+                  name: "Bondan Prabowo",
+                  info: "CEO",
+                })
 
         //- Блок с формой
         section.uikit__section(id="subscribe")

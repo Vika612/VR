@@ -1,0 +1,70 @@
+.profile {
+  position: relative;
+  padding: 9px;
+
+  border: 1px solid $color-transparent;
+  border-image: $gradient-2;
+  border-image-slice: 1;
+
+  transition: border-image $trans-default;
+
+  &__img-container {
+    position: relative;
+
+    width: 274px;
+    height: 370px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(50, 70, 188, 0.00) 0%, #192883 100%);
+    }
+  }
+
+  &__info-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 9px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .title,
+  &__info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  &__info {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-spun-pearl;
+  }
+
+  @include hover-focus {
+    border-image: $gradient;
+    border-image-slice: 1;
+  }
+}

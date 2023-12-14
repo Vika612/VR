@@ -21,12 +21,25 @@
     border: 1px solid $color-transparent;
     border-image: $gradient-2;
     border-image-slice: 1;
-    background-color: rgba(37, 37, 50, 0.60);
+    background-color: rgba(37, 37, 50, 0.6);
 
     transition: border-image $trans-default;
 
     @include vp-1279 {
       width: 100%;
+    }
+
+    @include hover-focus {
+      border-image: $gradient;
+      border-image-slice: 1;
+
+      .services__wrap::after {
+        opacity: 1;
+      }
+
+      .btn {
+        visibility: visible;
+      }
     }
   }
 
@@ -79,7 +92,7 @@
       content: "";
       width: calc(100% + 64px);
       height: 144px;
-      background: linear-gradient(180deg, rgba(37, 37, 50, 0.00) 0%, rgba(37, 37, 50, 0.91) 53.06%, #252532 100%);
+      background: linear-gradient(180deg, rgba(37, 37, 50, 0) 0%, rgba(37, 37, 50, 0.91) 53.06%, #252532 100%);
 
       opacity: 0;
       transition: opacity $trans-default;
@@ -96,6 +109,7 @@
 
     overflow: hidden;
     text-overflow: ellipsis;
+    /* stylelint-disable-next-line */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -118,20 +132,5 @@
 
     visibility: hidden;
     transition: visibility $trans-default;
-  }
-}
-
-.services__item {
-  @include hover-focus {
-    border-image: $gradient;
-    border-image-slice: 1;
-
-    .services__wrap::after {
-      opacity: 1;
-    }
-
-    .btn {
-      visibility: visible;
-    }
   }
 }

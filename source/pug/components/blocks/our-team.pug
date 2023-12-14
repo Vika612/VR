@@ -1,0 +1,9 @@
+mixin our-team()
+  .our-team.section&attributes(attributes)
+    .container
+      +title-wrap({
+        titleGradient: "Our team",
+        titleH2: "Our Professionals Team",
+      })
+      +profile-list()
+      +btn({text: "see all", href: "#"}).btn.btn--border-gradient

@@ -1,0 +1,43 @@
+.price-card {
+  width: 320px;
+  height: 221px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $color-jaguar-2;
+  border: 1px solid $color-transparent;
+  border-image: $gradient;
+  border-image-slice: 1;
+
+  &__title {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: $color-light-grey;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 66px;
+
+    color: $color-default-white;
+  }
+
+  .btn {
+    margin: 14px 0;
+    padding: 18px 38px;
+  }
+
+  &__note {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-spun-pearl;
+  }
+}

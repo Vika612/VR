@@ -42,6 +42,8 @@ block main
             li
               a(href="#profile") Профиль
             li
+              a(href="#price-card") Карточка цены
+            li
               a(href="#subscribe") Блок с формой
 
       //----------------------------------------------
@@ -413,6 +415,17 @@ block main
                   name: "Bondan Prabowo",
                   info: "CEO",
                 })
+
+        //- Карточка цены
+        section.uikit__section(id="price-card")
+          h2.uikit__h2 Карточка цены
+          .uikit__component
+            p.uikit__text.uikit__text--class .price-card
+              +price-card()
+            pre
+              |
+              code(class="language-pug").
+                +price-card()
 
         //- Блок с формой
         section.uikit__section(id="subscribe")

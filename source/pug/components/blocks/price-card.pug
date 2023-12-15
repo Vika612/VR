@@ -1,0 +1,6 @@
+mixin price-card()
+  .price-card&attributes(attributes)
+    p.price-card__title Start from
+    b.price-card__price $99
+    +btn({text: "get started", href: "#", isExternal: true}).btn.btn--gradient
+    span.price-card__note 30&nbsp;Days Moneyback Guarantee

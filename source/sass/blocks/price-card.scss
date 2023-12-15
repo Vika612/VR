@@ -12,6 +12,10 @@
   border-image: $gradient;
   border-image-slice: 1;
 
+  @include vp-374 {
+    width: 290px;
+  }
+
   &__title {
     margin: 0;
 

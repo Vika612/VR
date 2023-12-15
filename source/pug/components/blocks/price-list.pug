@@ -1,0 +1,27 @@
+-
+  const priceList = [
+    {
+      title: "Customizable Packages",
+      text: "We&nbsp;understand that each project is&nbsp;unique, so&nbsp;we&nbsp;offer customizable packages to&nbsp;ensure that you get the services you need at&nbsp;a&nbsp;price that works for you. Our team will work with you to&nbsp;create a&nbsp;package that meets your specific goals and budget.",
+    },
+    {
+      title: "Flexible Payment Options",
+      text: "We&nbsp;offer flexible payment options to&nbsp;make it&nbsp;easy for you to&nbsp;get started with our services. We&nbsp;accept various payment methods, including credit cards, bank transfers, and PayPal, and we&nbsp;can also work with you to&nbsp;create a&nbsp;payment plan that suits your needs.",
+    },
+    {
+      title: "Satisfaction Guarantee",
+      text: "We&nbsp;stand behind our services and are committed to&nbsp;ensuring that you are completely satisfied with the final product. If&nbsp;for any reason you are not happy with our services, we&nbsp;will work with you to&nbsp;make it&nbsp;right or&nbsp;provide a&nbsp;full refund.",
+    },
+  ]
+
+mixin price-list(options = {})
+  - const title = options.title;
+  - const text = options.text;
+
+    ul.price-list&attributes(attributes)
+      each item in priceList
+        li.price-list__item
+          .price-list__icon-container
+            +icon("icon-cloud", 42, 42, true)
+          h3.title.title--h3!= item.title
+          p.price-list__text!= item.text

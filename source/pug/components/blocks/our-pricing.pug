@@ -1,5 +1,6 @@
 mixin our-pricing()
   .our-pricing.section&attributes(attribites)
+    +icon("icon-bg-price", 1174, 783, true).our-pricing__bg
     .container
       +title-wrap({
         titleGradient: "our pricing",
@@ -8,3 +9,8 @@ mixin our-pricing()
       p.text
         | At&nbsp;VRNas, we&nbsp;believe that everyone should have access to&nbsp;the benefits of&nbsp;VR.
         | That&rsquo;s why we&nbsp;offer a&nbsp;range of&nbsp;pricing options to&nbsp;meet the needs of&nbsp;any budget.
+      .our-pricing__wrapper
+        +price-list()
+        .our-pricing__img-container
+          +picture("content", "image-3", "png", 360, 520)
+        +price-card()
